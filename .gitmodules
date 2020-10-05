@@ -1,0 +1,3 @@
+[submodule "Demo_stm32F407ZGT6/Src/pa_CommonLib"]
+	path = Demo_stm32F407ZGT6/Src/pa_CommonLib
+	url = https://github.com/ActivePeter/pa_CommonLib.git
