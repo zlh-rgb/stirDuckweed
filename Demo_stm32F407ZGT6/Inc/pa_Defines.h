@@ -39,9 +39,9 @@
 #define DISPLAY_USE_ILI9341
 #endif
 
-// #ifndef DISPLAY_USE_SSD1306
-// #define DISPLAY_USE_SSD1306
-// #endif
+#ifndef DISPLAY_USE_SSD1306
+#define DISPLAY_USE_SSD1306
+#endif
 
 // #ifndef DISPLAY_USE_ST7789
 // #define DISPLAY_USE_ST7789

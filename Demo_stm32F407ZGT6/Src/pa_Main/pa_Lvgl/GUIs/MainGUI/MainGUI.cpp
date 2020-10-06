@@ -1,9 +1,11 @@
 
 extern "C"
 {
+#include "pa_CommonLib/src/drv/pa_CommonDrv/pa_CommonDrv.h"
 #include "pa_CommonLib/src/service/graphic/lvgl/lvgl.h"
 #include "MainGUI.h"
 #include "stdio.h"
+#include "pa_CommonLib/src/util/pa_DataProcessor/pa_DataProcessor.h"
 }
 namespace GUI
 {
@@ -139,8 +141,8 @@ namespace GUI
         lv_obj_set_pos(encoderLabelValue, 5, 20);
 
         adcLabelValue = lv_label_create(valuePage, NULL); /*Add a label to the button*/
-        lv_label_set_text(adcLabelValue, "Encoder");
-        lv_obj_set_pos(adcLabelValue, 5, 20);
+        lv_label_set_text(adcLabelValue, "Adc");
+        lv_obj_set_pos(adcLabelValue, 5, 80);
 
         lv_obj_set_hidden(valuePage, true);
     }
@@ -160,12 +162,17 @@ namespace GUI
             lv_label_set_text(encoderLabelValue, strbuf);
         }
     }
-    void updateAdc(double value)
+    void updateAdc( float value)
     {
         {
             char strbuf[20];
-            snprintf(strbuf, 20, "adc:%f", value);
-            lv_label_set_text(adcLabelValue, strbuf);
+            char * pre="Adc:";
+            pa_Convert_Float2Str(value,strbuf,20,5);
+            char * add=(char *) pa_MEM_CUSTOM_ALLOC(strlen(pre) + strlen(strbuf)+12);
+            // snprintf(strbuf,20, "Adc:%d", (int)value);
+            sprintf(add, "%s%6d\n%s", pre,(int) value,strbuf);
+            lv_label_set_text(adcLabelValue, add);
+            pa_MEM_CUSTOM_FREE(add);
         }
     }
 
