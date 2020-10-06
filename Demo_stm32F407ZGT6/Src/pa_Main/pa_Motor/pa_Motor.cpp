@@ -9,21 +9,21 @@ namespace pa_Motor
     {
         switch (index)
         {
-        case 0://pwm c7
+        case 0://pwm a7
             if(dir){
-                HAL_GPIO_WritePin(GPIOC,GPIO_PIN_6 ,GPIO_PinState::GPIO_PIN_SET);
+                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14 ,GPIO_PinState::GPIO_PIN_SET);
                 HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PinState::GPIO_PIN_RESET);
             }else{
-                HAL_GPIO_WritePin(GPIOC,GPIO_PIN_6 ,GPIO_PinState::GPIO_PIN_RESET);
-                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PinState::GPIO_PIN_SET);
+                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15 ,GPIO_PinState::GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PinState::GPIO_PIN_SET);
             }
             break;
         case 1://pwm c8
             if(dir){
-                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PinState::GPIO_PIN_SET);
+                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_10,GPIO_PinState::GPIO_PIN_SET);
                 HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PinState::GPIO_PIN_RESET);
             }else{
-                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PinState::GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(GPIOD,GPIO_PIN_10,GPIO_PinState::GPIO_PIN_RESET);
                 HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PinState::GPIO_PIN_SET);
             }
             /* code */

@@ -148,7 +148,7 @@ namespace GUI
     {
         {
             char strbuf[20];
-            snprintf(strbuf, 20, "%d", time);
+            sprintf(strbuf, "t%d", time);
             lv_label_set_text(countlabel, strbuf);
         }
     }

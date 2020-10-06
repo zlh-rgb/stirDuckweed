@@ -20,13 +20,14 @@ int encoder1 = 0;
 int encoder1_delta = 0;
 int encoder2 = 0;
 int encoder2_delta = 0;
-extern TIM_HandleTypeDef htim3, htim4, htim5;
+extern TIM_HandleTypeDef htim2,htim3, htim4, htim5;
 //
 void pa_Main()
 {
     pa_PWM::initPWMs();
     HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
     HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
+    HAL_TIM_Base_Start_IT(&htim2);
 
     // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2,(GPIO_PinState)0);
     // LCD_Init();
@@ -36,7 +37,7 @@ void pa_Main()
     pa_touchScreen &touch = pa_touchScreen::instance;
     Ads_112c04 &ads112c04 = Ads_112c04::instance;
 
-    touch.init(240, 320, 14105, 17710, 451, 3884, 100);
+    touch.init(240, 320, 235, 3800, 451, 3884, 100);
 
     // pa_delayMs(100);
     ili9341.init(pa_ILI9341::Rotation::Rotation_VERTICAL_2);
@@ -69,6 +70,8 @@ void pa_Main()
     encoder1_delta = encoder2_delta = 0;
     for (;;)
     {
+//        run++;
+        // lv_tick_inc(10);
         pa_Motor::setSpeed(0, cnt * 1.0 / 1000);
         pa_Motor::setSpeed(1, cnt * 1.0 / 1000);
         // double adc;
@@ -81,7 +84,12 @@ void pa_Main()
             // GUI::updateAdc(adc);
             lv_task_handler(); //lvgl刷新显示内容
         }
-
+        
+        // if(touch.isPressed()){
+        //     GUI::updateRuningTime(1);
+        // }else{
+        //     GUI::updateRuningTime(0);
+        // }
         pa_delayMs(10);
         // if (touch.isPressed())
         // {
@@ -95,6 +103,13 @@ void pa_Main()
 }
 void tim_1ms_tick()
 {
+    cnt++;
+    if (cnt == 1000)
+    {
+        cnt = 0;
+        run++;
+    }
+
     if (cnt % 50 == 0)
     {
         encoder1_delta = (short)(__HAL_TIM_GET_COUNTER(&htim4));
@@ -106,10 +121,5 @@ void tim_1ms_tick()
     }
 
     lv_tick_inc(1);
-    cnt++;
-    if (cnt == 1000)
-    {
-        cnt = 0;
-        run++;
-    }
+    
 }

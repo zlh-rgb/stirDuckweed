@@ -9,3 +9,102 @@
 [INFO ] 2020-10-06 02:39:44,577 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
 [INFO ] 2020-10-06 02:39:44,577 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
 [INFO ] 2020-10-06 02:39:54,087 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 03:29:16,343 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 03:29:16,455 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 03:29:16,455 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 03:29:16,461 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6544' is ignored
+[INFO ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 03:29:16,487 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 03:29:23,565 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 03:56:18,544 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 03:56:18,551 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 03:56:18,551 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 03:56:18,557 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 03:56:18,580 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 03:56:18,580 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 03:56:18,580 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 03:56:18,580 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6545' is ignored
+[INFO ] 2020-10-06 03:56:18,580 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 03:56:18,581 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 03:56:25,751 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:15:15,438 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:15:15,547 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:15:15,547 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:15:15,555 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:15:15,609 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:15:15,609 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:15:15,609 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:15:15,610 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6546' is ignored
+[INFO ] 2020-10-06 04:15:15,610 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:15:15,610 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:15:23,160 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:20:01,465 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:20:01,475 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:20:01,475 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:20:01,480 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:20:01,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:20:01,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:20:01,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:20:01,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6547' is ignored
+[INFO ] 2020-10-06 04:20:01,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:20:01,500 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:20:06,380 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:21:13,968 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:21:13,979 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:21:13,979 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:21:13,983 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:21:14,012 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:21:14,012 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:21:14,012 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:21:14,013 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6548' is ignored
+[INFO ] 2020-10-06 04:21:14,013 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:21:14,013 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:21:21,623 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:28:22,478 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:28:22,490 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:28:22,490 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:28:22,499 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6549' is ignored
+[INFO ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:28:22,525 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:28:30,626 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:31:53,931 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:31:53,939 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:31:53,939 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:31:53,944 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:31:53,965 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:31:53,965 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:31:53,965 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:31:53,965 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6550' is ignored
+[INFO ] 2020-10-06 04:31:53,966 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:31:53,966 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:31:59,719 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 04:56:24,488 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 04:56:24,496 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 04:56:24,496 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 04:56:24,501 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 04:56:24,522 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 04:56:24,523 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 04:56:24,523 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 04:56:24,523 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6551' is ignored
+[INFO ] 2020-10-06 04:56:24,523 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 04:56:24,523 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 04:56:29,892 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
+[INFO ] 2020-10-06 14:27:43,101 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Start Cube IDE services
+[INFO ] 2020-10-06 14:27:43,217 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Cube IDE services are relying on '1.0.0.19rc2-gerrit131098-p7' product version and '2782_20190416-0642(UTC)' build version 
+[INFO ] 2020-10-06 14:27:43,217 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Analyze Cube IDE services command line
+[INFO ] 2020-10-06 14:27:43,224 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service type
+[INFO ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Use Cube IDE service: 'Mx update project service'
+[INFO ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Look for Cube IDE service option(s)
+[WARN ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '-rmiServerPort' is ignored
+[WARN ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Argument '6552' is ignored
+[INFO ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Check Cube IDE service option(s)
+[INFO ] 2020-10-06 14:27:43,260 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - Run Cube IDE service
+[INFO ] 2020-10-06 14:27:49,287 com.st.stm32cube.ide.common.services.mx.rcp.CubeIdeServices - End Cube IDE services
