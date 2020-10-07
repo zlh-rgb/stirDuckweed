@@ -6,6 +6,7 @@ extern "C"
 
 #include "pa_CommonLib/src/service/input/touchScreen/pa_touchScreen.h"
 #include <stdlib.h>
+#include "GUIs/MainGUI/MainGUI.h"
 }
 // void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p);
 // bool my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data);
@@ -90,6 +91,7 @@ void pa_Lvgl_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
     {
         uint16_t coord[2];
         pa_touchScreen::instance.readRaw(coord);
+        GUI::updateTouchXY(coord[0],coord[1]);
         pa_touchScreen::instance.turnRawToScreen(coord);
         data->point.x = coord[0];
         data->point.y = coord[1];

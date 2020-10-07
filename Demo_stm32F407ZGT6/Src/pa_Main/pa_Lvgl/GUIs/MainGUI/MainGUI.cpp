@@ -17,6 +17,8 @@ namespace GUI
     lv_obj_t *valuePage;
     lv_obj_t *encoderLabelValue;
     lv_obj_t *adcLabelValue;
+    lv_obj_t *posLabelValue;
+    lv_obj_t *attitudeLabelValue;
     /////////////////////////////////
     lv_obj_t *menuPage;
 
@@ -144,6 +146,14 @@ namespace GUI
         lv_label_set_text(adcLabelValue, "Adc");
         lv_obj_set_pos(adcLabelValue, 5, 80);
 
+        posLabelValue = lv_label_create(valuePage, NULL); /*Add a label to the button*/
+        lv_label_set_text(posLabelValue, "pos");
+        lv_obj_set_pos(posLabelValue, 5, 100);
+
+        attitudeLabelValue= lv_label_create(valuePage, NULL); /*Add a label to the button*/
+        lv_label_set_text(attitudeLabelValue, "pos");
+        lv_obj_set_pos(attitudeLabelValue, 5, 130);
+
         lv_obj_set_hidden(valuePage, true);
     }
     void updateRuningTime(int time)
@@ -166,13 +176,41 @@ namespace GUI
     {
         {
             char strbuf[20];
-            char * pre="Adc:";
-            pa_Convert_Float2Str(value,strbuf,20,5);
-            char * add=(char *) pa_MEM_CUSTOM_ALLOC(strlen(pre) + strlen(strbuf)+12);
-            // snprintf(strbuf,20, "Adc:%d", (int)value);
-            sprintf(add, "%s%6d\n%s", pre,(int) value,strbuf);
-            lv_label_set_text(adcLabelValue, add);
-            pa_MEM_CUSTOM_FREE(add);
+            // char * pre="Adc:";
+            // pa_Convert_Float2Str(value,strbuf,20,5);
+            // char * add=(char *) pa_MEM_CUSTOM_ALLOC(strlen(pre) + strlen(strbuf)+12);
+            // // snprintf(strbuf,20, "Adc:%d", (int)value);
+            // sprintf(add, "%s%6d\n%s", pre,(int) value,strbuf);
+            pa_snprintf(strbuf,20,"adc:%05.3f",value);
+            lv_label_set_text(adcLabelValue, strbuf);
+            // pa_MEM_CUSTOM_FREE(add);
+        }
+    }
+
+    void updateTouchXY(int x,int y){
+        {
+            char strbuf[20];
+            // char * pre="Adc:";
+            // pa_Convert_Float2Str(value,strbuf,20,5);
+            // char * add=(char *) pa_MEM_CUSTOM_ALLOC(strlen(pre) + strlen(strbuf)+12);
+            // // snprintf(strbuf,20, "Adc:%d", (int)value);
+            // sprintf(add, "%s%6d\n%s", pre,(int) value,strbuf);
+            pa_snprintf(strbuf,20,"pos:%d\n%d",x,y);
+            lv_label_set_text(posLabelValue, strbuf);
+            // pa_MEM_CUSTOM_FREE(add);
+        }
+    }
+    void updateAttitude(float x,float y,float z){
+        {
+            char strbuf[30];
+            // char * pre="Adc:";
+            // pa_Convert_Float2Str(value,strbuf,20,5);
+            // char * add=(char *) pa_MEM_CUSTOM_ALLOC(strlen(pre) + strlen(strbuf)+12);
+            // // snprintf(strbuf,20, "Adc:%d", (int)value);
+            // sprintf(add, "%s%6d\n%s", pre,(int) value,strbuf);
+            pa_snprintf(strbuf,30,"att:%3.2f %3.2f %3.2f",x,y,z);
+            lv_label_set_text(attitudeLabelValue, strbuf);
+            // pa_MEM_CUSTOM_FREE(add);
         }
     }
 

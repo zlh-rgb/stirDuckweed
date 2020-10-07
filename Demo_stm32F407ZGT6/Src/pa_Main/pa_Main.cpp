@@ -13,6 +13,7 @@ extern "C"
 #include "pa_Lvgl/GUIs/MainGUI/MainGUI.h"
 #include "pa_CommonLib/src/drv/pa_PWM/pa_PWM.h"
 #include "pa_Motor/pa_Motor.h"
+#include "pa_CommonLib/src/service/sensors/attitude/bno055/bno055.h"
 // #include "pa_CommonLib/src/service/display/ssd1306/pa_oled.h"
 }
 
@@ -37,10 +38,12 @@ void pa_Main()
     // LCD_ShowString(0,0,(const unsigned char *)"helloWorld",GREEN,BLACK,12,0);
     pa_ILI9341 &ili9341 = pa_ILI9341::instance;
     pa_touchScreen &touch = pa_touchScreen::instance;
-    Ads_112c04 &ads112c04 = Ads_112c04::instance;
+    // Ads_112c04 &ads112c04 = Ads_112c04::instance;
+
+    pa_BNO055_init();
     // OLED_Init(Protocal::Protocal_IIC);
     // OLED_ShowString(0,0,"helloWorld",12);
-    touch.init(240, 320, 235, 3800, 451, 3884, 100);
+    touch.init(240, 320, 235, 3800, 451, 3884, 30);
 
     // pa_delayMs(100);
     ili9341.init(pa_ILI9341::Rotation::Rotation_VERTICAL_2);
@@ -49,13 +52,13 @@ void pa_Main()
     ili9341.flush(0, 101, 235, 150, 0xff00);
     // pa_delayMs(100);
     // bool a = false;
-    ads112c04.init(Ads_112c04::AxState::DGND,
-                   Ads_112c04::AxState::DGND);
-    ads112c04.configRegister0(Ads_112c04::Gain::GAIN_1);
-    ads112c04.configRegister1(Ads_112c04::SpeedOfSample::SPS_1000,
-                              Ads_112c04::Mode::Mode_Normal,
-                              Ads_112c04::ConvMode::Continuous);
-    ads112c04.startConv();
+    // ads112c04.init(Ads_112c04::AxState::DGND,
+    //                Ads_112c04::AxState::DGND);
+    // ads112c04.configRegister0(Ads_112c04::Gain::GAIN_1);
+    // ads112c04.configRegister1(Ads_112c04::SpeedOfSample::SPS_1000,
+    //                           Ads_112c04::Mode::Mode_Normal,
+    //                           Ads_112c04::ConvMode::Continuous);
+    // ads112c04.startConv();
     lv_init();
     pa_Lvgl_init();
     //button
@@ -77,11 +80,13 @@ void pa_Main()
         // lv_tick_inc(10);
         pa_Motor::setSpeed(0, cnt * 1.0 / 1000);
         pa_Motor::setSpeed(1, cnt * 1.0 / 1000);
-        float adc=0.5;
-        if(!ads112c04.getDrdyState()){
-            adc=ads112c04.readADC();
-            GUI::updateAdc(adc);
-        }
+        bno055_vector_t att=pa_BNO055_getVector();
+        GUI::updateAttitude(att.x,att.y,att.z);
+        // float adc=0.5;
+        // if(!ads112c04.getDrdyState()){
+        //     adc=ads112c04.readADC();
+        //     GUI::updateAdc(adc);
+        // }
         { //lv
             GUI::updateRuningTime(run);
             GUI::updateEncoder(encoder1, encoder1_delta, encoder2, encoder2_delta);
