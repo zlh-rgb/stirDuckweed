@@ -14,16 +14,18 @@ extern "C"
 #include "pa_CommonLib/src/drv/pa_PWM/pa_PWM.h"
 #include "pa_Motor/pa_Motor.h"
 #include "pa_CommonLib/src/service/sensors/attitude/bno055/bno055.h"
-// #include "pa_CommonLib/src/service/display/ssd1306/pa_oled.h"
-}
+#include "pa_CommonLib/src/service/sensors/other/GY906/GY906.h"
 
+    // #include "pa_CommonLib/src/service/display/ssd1306/pa_oled.h"
+}
+#include "pa_CommonLib/src/service/sensors/distance/VL53L0X/VL53L0X.h"
 int cnt = 0;
 int run = 0;
 int encoder1 = 0;
 int encoder1_delta = 0;
 int encoder2 = 0;
 int encoder2_delta = 0;
-extern TIM_HandleTypeDef htim2,htim3, htim4, htim5;
+extern TIM_HandleTypeDef htim2, htim3, htim4, htim5;
 //
 void pa_Main()
 {
@@ -40,7 +42,7 @@ void pa_Main()
     pa_touchScreen &touch = pa_touchScreen::instance;
     // Ads_112c04 &ads112c04 = Ads_112c04::instance;
 
-    pa_BNO055_init();
+    // pa_BNO055_init();
     // OLED_Init(Protocal::Protocal_IIC);
     // OLED_ShowString(0,0,"helloWorld",12);
     touch.init(240, 320, 235, 3800, 451, 3884, 30);
@@ -52,6 +54,8 @@ void pa_Main()
     ili9341.flush(0, 101, 235, 150, 0xff00);
     // pa_delayMs(100);
     // bool a = false;
+
+    //    ads112c04         ////////////////////////////////////////////////////////////////////////////////////
     // ads112c04.init(Ads_112c04::AxState::DGND,
     //                Ads_112c04::AxState::DGND);
     // ads112c04.configRegister0(Ads_112c04::Gain::GAIN_1);
@@ -59,6 +63,15 @@ void pa_Main()
     //                           Ads_112c04::Mode::Mode_Normal,
     //                           Ads_112c04::ConvMode::Continuous);
     // ads112c04.startConv();
+    //////////////////////////////////////////////////////////////////////////////////////
+    if (!VL53L0X::instance.init())
+    {
+
+        while (1)
+        {
+        }
+    }
+    VL53L0X::instance.startContinuous();
     lv_init();
     pa_Lvgl_init();
     //button
@@ -76,24 +89,34 @@ void pa_Main()
     encoder1_delta = encoder2_delta = 0;
     for (;;)
     {
-//        run++;
+        //        run++;
         // lv_tick_inc(10);
+        //    motor         ////////////////////////////////////////////////////////////////////////////////////
         pa_Motor::setSpeed(0, cnt * 1.0 / 1000);
         pa_Motor::setSpeed(1, cnt * 1.0 / 1000);
-        bno055_vector_t att=pa_BNO055_getVector();
-        GUI::updateAttitude(att.x,att.y,att.z);
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        //    bno055         ////////////////////////////////////////////////////////////////////////////////////
+        // bno055_vector_t att=pa_BNO055_getVector();
+        // GUI::updateAttitude(att.x,att.y,att.z);
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        //    ads112c04         ////////////////////////////////////////////////////////////////////////////////////
         // float adc=0.5;
         // if(!ads112c04.getDrdyState()){
         //     adc=ads112c04.readADC();
-        //     GUI::updateAdc(adc);
+
+        GUI::updateAdc(VL53L0X::instance.readRangeContinuousMillimeters());
         // }
+        //////////////////////////////////////////////////////////////////////////////////////
+
         { //lv
             GUI::updateRuningTime(run);
             GUI::updateEncoder(encoder1, encoder1_delta, encoder2, encoder2_delta);
-            
+
             lv_task_handler(); //lvgl刷新显示内容
         }
-        
+
         // if(touch.isPressed()){
         //     GUI::updateRuningTime(1);
         // }else{
@@ -110,8 +133,10 @@ void pa_Main()
         // }
     }
 }
+extern uint64_t pa_milliCnt;
 void tim_1ms_tick()
 {
+    pa_milliCnt++;
     cnt++;
     if (cnt == 1000)
     {
@@ -130,5 +155,4 @@ void tim_1ms_tick()
     }
 
     lv_tick_inc(1);
-    
 }
