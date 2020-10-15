@@ -19,6 +19,7 @@ extern "C"
     // #include "pa_CommonLib/src/service/display/ssd1306/pa_oled.h"
 }
 #include "pa_CommonLib/src/service/sensors/distance/VL53L0X/VL53L0X.h"
+
 int cnt = 0;
 int run = 0;
 int encoder1 = 0;
@@ -26,9 +27,11 @@ int encoder1_delta = 0;
 int encoder2 = 0;
 int encoder2_delta = 0;
 extern TIM_HandleTypeDef htim2, htim3, htim4, htim5;
+extern UART_HandleTypeDef huart1;
 //
 void pa_Main()
 {
+	HAL_UART_Transmit(&huart1,(uint8_t*) "hel", 3, 0xffff);
     pa_PWM::initPWMs();
     HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
     HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
@@ -64,14 +67,14 @@ void pa_Main()
     //                           Ads_112c04::ConvMode::Continuous);
     // ads112c04.startConv();
     //////////////////////////////////////////////////////////////////////////////////////
-    if (!VL53L0X::instance.init())
-    {
-
-        while (1)
-        {
-        }
-    }
-    VL53L0X::instance.startContinuous();
+//    if (!VL53L0X::instance.init())
+//    {
+//
+//        while (1)
+//        {
+//        }
+//    }
+//    VL53L0X::instance.startContinuous();
     lv_init();
     pa_Lvgl_init();
     //button
@@ -106,7 +109,7 @@ void pa_Main()
         // if(!ads112c04.getDrdyState()){
         //     adc=ads112c04.readADC();
 
-        GUI::updateAdc(VL53L0X::instance.readRangeContinuousMillimeters());
+//        GUI::updateAdc(VL53L0X::instance.readRangeContinuousMillimeters());
         // }
         //////////////////////////////////////////////////////////////////////////////////////
 
